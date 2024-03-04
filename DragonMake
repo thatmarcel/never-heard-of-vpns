@@ -1,0 +1,16 @@
+---
+name: NeverHeardOfVPNs
+icmd: echo stonks
+
+all:
+    targetvers: 13.0
+    archs:
+        - arm64
+        - arm64e
+
+NeverHeardOfVPNsTweak:
+    type: tweak
+    logos_files:
+        - "*.xm"
+    objc_files:
+        - "*.m"
