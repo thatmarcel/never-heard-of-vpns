@@ -1,9 +1,9 @@
 Package: com.thatmarcel.tweaks.neverheardofvpns
 Name: NeverHeardOfVPNs
 Depends: mobilesubstrate
-Version: 1.0.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description: I'm using a VPN? Uhhhh, no.
-Maintainer: Marcel Braun
-Author: Marcel Braun
+Maintainer: thatmarcel
+Author: thatmarcel
 Section: Tweaks

@@ -2,12 +2,12 @@
 #import <CFNetwork/CFNetwork.h>
 
 %hookf(CFDictionaryRef, CFNetworkCopySystemProxySettings, void) {
-    NSLog(@"NeverHeardOfVPNs CFNetworkCopySystemProxySettings starting");
+    NSLog(@"[NeverHeardOfVPNs] CFNetworkCopySystemProxySettings starting");
     CFDictionaryRef ogRef = %orig;
 
     NSDictionary *og = CFBridgingRelease(ogRef);
 
-    NSLog(@"NeverHeardOfVPNs CFNetworkCopySystemProxySettings from: %@", og);
+    NSLog(@"[NeverHeardOfVPNs] CFNetworkCopySystemProxySettings from: %@", og);
 
     NSDictionary *scoped = og[@"__SCOPED__"];
 
@@ -36,7 +36,7 @@
 
     NSDictionary *res = [mutableRes copy];
 
-    NSLog(@"NeverHeardOfVPNs CFNetworkCopySystemProxySettings to: %@", res);
+    NSLog(@"[NeverHeardOfVPNs] CFNetworkCopySystemProxySettings to: %@", res);
 
     return (__bridge_retained CFDictionaryRef) res;
 }
